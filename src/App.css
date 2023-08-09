@@ -1,0 +1,168 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.home {
+  position: relative;
+  background: rgb(55,177,255);
+  background: linear-gradient(90deg, rgba(55,177,255,1) 13%, rgba(91,221,135,1) 90%, rgba(54,242,97,1) 100%);
+  overflow: hidden;  /* Hide the pseudo-elements that go outside the bounds */
+}
+
+.home::before, .home::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2%;  /* Adjust this to change the height of the U-shape */
+  width: 50%;
+  background: white;  /* Or whatever color you want the U-shape to be */
+}
+
+.home::before {
+  left: 0;
+  transform-origin: bottom left;
+  transform: skewY(1.5deg);
+}
+
+.home::after {
+  right: 0;
+  transform-origin: bottom right;
+  transform: skewY(-1.5deg);
+}
+
+
+
+.blinking {
+  animation: blink-animation 1s infinite;
+}
+
+@keyframes blink-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.hover-card:hover {
+  transform: scale(1.05);
+}
+
+.hover-card {
+  padding: 4%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+
+.hover-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.list {
+  padding: 17px;
+  margin-bottom: 10px;
+  border: none;
+
+}
+
+.active {
+  box-shadow: 0 5px 3px #a6bec5;
+}
+
+.round-count {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color:rgba(55, 125, 255, .1);
+  color: #377dff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 5px;
+}
+
+@media (min-width: 768px) {
+  .hover-card {
+    max-width: 90%;
+  }
+  .shop{
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 834px) and (max-width: 1194px) {
+  .hover-card {
+    max-width: 100%;
+  }
+
+}
+.card-hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: all 0.3s ease; /* Transition for hover effect */
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+
+.card-img-size {
+  max-height: 250px; /* You can adjust the height as needed */
+  object-fit: cover; /* This will make sure the image covers the space without distortion */
+}
+
+.footer{
+  background: rgb(55,177,255);
+  background: linear-gradient(90deg, rgba(55,177,255,1) 13%, rgba(91,221,135,1) 90%, rgba(54,242,97,1) 100%);
+  padding: 3% 10% 3%;
+  color: aliceblue;
+  font-family: "inherit";
+}
